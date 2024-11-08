@@ -16,13 +16,37 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+
+      :root{
+        --Stone-100: hsl(30, 54%, 90%);
+        --Stone-150: hsl(30, 18%, 87%);
+        --Stone-600: hsl(30, 10%, 34%);
+        --Stone-900: hsl(24, 5%, 18%);
+        --Rose-800: hsl(332, 51%, 32%);
+        --Rose-50: hsl(330, 100%, 98%);
+
+      }
+
+
+
       body{
         background: lightgray;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.4;
       }
 
       .image, img{
         width: 100%;
         border-radius: 20px;
+      }
+
+      h1{
+        font-size: 2.5rem;
+      }
+
+      hr{
+        border: 1px solid var(--Stone-150);
       }
 
       .container {
@@ -43,8 +67,12 @@
         margin-bottom: 1rem;
       }
 
+      ul li{
+        padding-left: 1rem;
+      }
+
       table, tr{
-        border: 1px solid blue;
+        border: 1px solid var(--Stone-150);
         border-collapse: collapse;
         padding: 1rem;
         /* text-align: center; */
@@ -71,13 +99,40 @@
       }
 
       tr td:nth-child(2){
-        color: red;
+        color: var(--Rose-800);
         font-weight: 800;
       }
 
       .subhead{
-        color: red;
+        color: var(--Rose-800);
         font-weight: 800;
+      }
+
+      .rose{
+        color: var(--Rose-800);
+      }
+
+      li .rose{
+        font-weight: 700;
+      }
+
+      ol{
+        list-style: none;
+        counter-reset: item;
+      }
+
+      ol li{
+        counter-increment: item;
+        /* margin-left: 2rem; */
+      }
+
+      ol li::before{
+        content: counter(item);
+        position: relative;
+        right: 1.5rem;
+        font-weight: 800;
+        color: var(--Rose-800);
+        /* margin-right: 3rem; */
       }
 
       .attribution {
@@ -86,6 +141,12 @@
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
+      }
+
+      @media (max-width: 400px) {
+        .container{
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -101,9 +162,9 @@
       <section class="preparation">
         <h3>Preparation time</h3>
         <ul>
-          <li>Total: Approximately 10 minutes</li>
-          <li>Preparation: 5 minutes</li>
-          <li>Cooking: 5 minutes</li>
+          <li><span class="rose">Total:</span> Approximately 10 minutes</li>
+          <li><span class="rose">Preparation:</span> 5 minutes</li>
+          <li><span class="rose">Cooking:</span> 5 minutes</li>
         </ul>
       </section>
       <section>
@@ -123,37 +184,29 @@
         <h2 class="subhead">Instructions</h2>
         <ol>
           <li>
-            Beat the eggs: In a bowl, beat the eggs with a pinch of salt and
-            pepper until they are well mixed.
+            <span class="rose">Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and
+            pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.
           </li>
           <li>
-            You can add a tablespoon of water or milk for a fluffier texture.
-          </li>
-          <li>
-            Heat the pan: Place a non-stick frying pan over medium heat and add
+            <span class="rose">Heat the pan:</span> Place a non-stick frying pan over medium heat and add
             butter or oil.
           </li>
           <li>
-            Cook the omelette: Once the butter is melted and bubbling, pour in
-            the eggs. Tilt the pan to ensure
-          </li>
-          <li>the eggs evenly coat the surface.</li>
-          <li>
-            Add fillings (optional): When the eggs begin to set at the edges but
-            are still slightly runny in the
+            <span class="rose">Cook the omelette:</span> Once the butter is melted and bubbling, pour in
+            the eggs. Tilt the pan to ensure the eggs evenly coat the surface.
           </li>
           <li>
-            middle, sprinkle your chosen fillings over one half of the omelette.
+            <span class="rose">Add fillings (optional):</span> When the eggs begin to set at the edges but
+            are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.
           </li>
           <li>
-            Fold and serve: As the omelette continues to cook, carefully lift
-            one edge and fold it over the
-          </li>
-          <li>
-            fillings. Let it cook for another minute, then slide it onto a
+            <span class="rose">Fold and serve:</span> As the omelette continues to cook, carefully lift
+            one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a
             plate.
           </li>
-          <li>Enjoy: Serve hot, with additional salt and pepper if needed.</li>
+          <li>
+            <span class="rose">Enjoy:</span> Serve hot, with additional salt and pepper if needed.
+          </li>
         </ol>
       </section>
 
@@ -188,7 +241,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/Airme1">Emmanuel Ochoja</a>.
     </div>
   </body>
 </html>
