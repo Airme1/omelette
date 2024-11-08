@@ -23,8 +23,8 @@ This is a simple menu website for making an Omelette, I used HTML and CSS only i
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution page](https://www.frontendmentor.io/solutions/using-html-and-css-sY0WuIpLeJ)
+- Live Site URL: [Omelette website](https://airme1.github.io/omelette/)
 
 ## My process
 - I started by writing the HTML for the site to give it a good structure
